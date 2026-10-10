@@ -1,0 +1,221 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Workshop Memes 😂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background: linear-gradient(135deg, #d7fff5, #80e8d0, #c5fff4);
+            color: #073f3b;
+            text-align: center;
+            min-height: 100vh;
+            padding: 30px 15px;
+        }
+
+        header {
+            padding: 35px 10px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #073f3b;
+            color: #baffed;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .memes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #50cdb5;
+            border-radius: 25px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 25px #006b6030;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) rotate(-1deg);
+            box-shadow: 0 15px 30px #006b6040;
+        }
+
+        .emoji {
+            font-size: 5rem;
+            margin: 15px 0;
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #008f79;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 30px 0;
+            padding: 16px 28px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: #087f70;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #045b50;
+            transform: scale(1.05);
+        }
+
+        #surprise {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px auto 30px;
+            max-width: 700px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            padding: 20px;
+        }
+
+        .floating {
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="tag">💻 GITHUB WORKSHOP EDITION</div>
+        <h1>Git Happens! 😂 <span class="floating">🚀</span></h1>
+        <p>From "What is Git?" to "Why isn't my code pushing?"</p>
+    </header>
+
+    <section class="memes">
+
+        <div class="card">
+            <div class="emoji">🤓</div>
+            <h2>Before the Workshop</h2>
+            <p>
+                "GitHub? Easy! I'll learn everything in 10 minutes."
+                <br><br>
+                <span class="highlight">Confidence: 100%</span>
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">💀</div>
+            <h2>After typing git push</h2>
+            <p>
+                "Why is it asking me to pull first?!"
+                <br><br>
+                <span class="highlight">Confidence: 0%</span>
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">😭</div>
+            <h2>Git Commit</h2>
+            <p>
+                Me: "I saved my code!"
+                <br>
+                Git: "Cool. Did you commit it?"
+                <br><br>
+                <span class="highlight">PANIC MODE ON</span>
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🫡</div>
+            <h2>When it finally works</h2>
+            <p>
+                One successful push and suddenly I'm the CEO of Software Engineering.
+                <br><br>
+                <span class="highlight">Developer unlocked! ✨</span>
+            </p>
+        </div>
+
+    </section>
+
+    <button onclick="newMeme()">Click for a GitHub Truth 😂</button>
+
+    <div id="surprise">
+        Your code works on my computer!
+    </div>
+
+    <footer>
+        Made with 💚, caffeine ☕ & 47 browser tabs.
+        <br><br>
+        <strong>LET THE JOURNEY BEGIN 🚀</strong>
+        <p style="margin-top: 12px;">#GitHubWorkshop #GitAndGitHub #CodingMemes</p>
+    </footer>
+
+    <script>
+        const memes = [
+            "git status: checking my life choices 💀",
+            "404: Confidence Not Found 😂",
+            "git commit -m 'please work' 🙏",
+            "Me fixing one bug and creating five more 🤡",
+            "It worked five minutes ago. I swear! 😭",
+            "GitHub is just Google Drive for people who panic in terminals 💻",
+            "git push origin main... and I hold my breath 😶",
+            "My code has more errors than my sleep schedule ☕"
+        ];
+
+        function newMeme() {
+            const randomIndex = Math.floor(Math.random() * memes.length);
+            document.getElementById("surprise").textContent =
+                memes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
+```
